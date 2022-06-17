@@ -143,7 +143,6 @@ local config = {
     ["nvim-lsp-installer"] = {
       ensure_installed = { "sumneko_lua", "dartls" },
     },
-    ["flutter-tools"] = {},
     packer = {
       compile_path = vim.fn.stdpath "config" .. "/lua/packer_compiled.lua",
     },
@@ -176,6 +175,8 @@ local config = {
           -- ["N"] = { "<cmd>tabnew<cr>", "New Buffer" },
           l = {
             f = { vim.lsp.buf.formatting_sync, "Format code" },
+            r = { "<cmd>FlutterRestart<CR>", "FlutterRestart" },
+            t = { "<cmd>FlutterOutlineToggle<CR>", "FlutterTogle" },
           },
         },
       },
@@ -220,6 +221,7 @@ local config = {
         settings = {
           showTodos = true,
           completeFunctionCalls = true,
+          analysisExcludedFolders = {},
         },
         lsp = {
           color = { -- show the derived colours for dart variables
@@ -231,9 +233,7 @@ local config = {
         --   client.resolved_capabilities = false
         -- end,
       },
-      ["server-settings"] = {
-        sumneko_lua = { on_attach = function() end },
-      },
+      ["server-settings"] = {},
 
       -- example for addings schemas to yamlls
       -- yamlls = {
@@ -261,6 +261,7 @@ local config = {
   polish = function()
     -- Set key bindings
     vim.keymap.set("n", "<C-s>", ":w!<CR>")
+    -- vim.keymap.set("n", "<leader>fR", ":FlutterRestart<CR>")
 
     -- Set autocommands
     vim.api.nvim_create_augroup("packer_conf", { clear = true })

@@ -1,0 +1,64 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.054  000.054: --- NVIM STARTING ---
+001.172  001.118: locale set
+002.133  000.961: inits 1
+002.171  000.038: window checked
+002.184  000.014: parsing arguments
+009.332  007.148: expanding arguments
+009.412  000.080: inits 2
+010.787  001.375: init highlight
+010.798  000.011: waiting for UI
+013.564  002.766: done waiting for UI
+013.642  000.079: init screen for UI
+013.709  000.067: init default mappings
+013.809  000.100: init default autocommands
+017.131  000.342  000.342: sourcing /usr/share/nvim/runtime/ftplugin.vim
+017.614  000.147  000.147: sourcing /usr/share/nvim/runtime/indent.vim
+074.835  013.939  013.939: sourcing /home/jetandar/.local/share/nvim/site/pack/packer/start/darkplus.nvim/colors/darkplus.vim
+109.099  091.258  077.319: sourcing /home/jetandar/.config/nvim/init.lua
+109.146  003.590: sourcing vimrc file(s)
+109.748  000.098  000.098: sourcing /usr/share/nvim/runtime/filetype.lua
+132.041  000.047  000.047: sourcing /home/jetandar/.local/share/nvim/site/pack/packer/start/LuaSnip/ftdetect/snippets.vim
+133.173  023.372  023.325: sourcing /usr/share/nvim/runtime/filetype.vim
+134.162  000.258  000.258: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+134.782  001.354  001.095: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+137.989  000.792  000.792: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+138.061  000.030  000.030: sourcing /usr/share/nvim/runtime/plugin/health.vim
+138.280  000.181  000.181: sourcing /usr/share/nvim/runtime/plugin/man.vim
+139.853  000.658  000.658: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+140.172  001.853  001.195: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+140.661  000.451  000.451: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+141.963  001.264  001.264: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+142.508  000.029  000.029: sourcing /home/jetandar/.local/share/nvim/rplugin.vim
+142.528  000.491  000.462: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+142.870  000.286  000.286: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+143.005  000.073  000.073: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+143.494  000.439  000.439: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+143.824  000.257  000.257: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+143.930  000.056  000.056: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+144.532  000.552  000.552: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+147.321  002.545  002.545: sourcing /home/jetandar/.config/nvim/plugin/packer_compiled.lua
+147.998  004.759: loading rtp plugins
+149.873  001.043  001.043: sourcing /home/jetandar/.local/share/nvim/site/pack/packer/start/LuaSnip/plugin/luasnip.vim
+152.244  001.290  001.290: sourcing /home/jetandar/.local/share/nvim/site/pack/packer/start/nvim-cmp/plugin/cmp.lua
+152.853  000.367  000.367: sourcing /home/jetandar/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer/plugin/nvim-lsp-installer.vim
+153.426  000.241  000.241: sourcing /home/jetandar/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+154.004  000.104  000.104: sourcing /home/jetandar/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+154.585  003.542: loading packages
+158.750  000.496  000.496: sourcing /home/jetandar/.local/share/nvim/site/pack/packer/start/Comment.nvim/after/plugin/Comment.lua
+159.531  000.584  000.584: sourcing /home/jetandar/.local/share/nvim/site/pack/packer/start/cmp-buffer/after/plugin/cmp_buffer.lua
+160.098  000.375  000.375: sourcing /home/jetandar/.local/share/nvim/site/pack/packer/start/cmp-cmdline/after/plugin/cmp_cmdline.lua
+160.786  000.487  000.487: sourcing /home/jetandar/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp/after/plugin/cmp_nvim_lsp.lua
+161.261  000.284  000.284: sourcing /home/jetandar/.local/share/nvim/site/pack/packer/start/cmp-path/after/plugin/cmp_path.lua
+162.134  000.665  000.665: sourcing /home/jetandar/.local/share/nvim/site/pack/packer/start/cmp_luasnip/after/plugin/cmp_luasnip.lua
+162.217  004.741: loading after plugins
+162.269  000.052: inits 3
+163.898  001.629: reading ShaDa
+164.488  000.591: opening buffers
+164.573  000.085: BufEnter autocommands
+164.581  000.009: editing files in windows
