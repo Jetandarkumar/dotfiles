@@ -62,7 +62,7 @@ lspconfig.util.default_config = vim.tbl_deep_extend(
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 
-local servers = { 'tsserver', "sumneko_lua", "dartls" };
+local servers = { 'tsserver', "sumneko_lua", "dartls", "rust_analyzer", "yamlls" };
 
 
 require("nvim-lsp-installer").setup {
@@ -76,6 +76,25 @@ require("nvim-lsp-installer").setup {
 -- LSP Servers
 ---
 
+lspconfig["rust_analyzer"].setup {
+  on_attach = function(client, bufnr)
+    lspconfig.util.default_config.on_attach(client, bufnr)
+  end,
+  settings = {
+    ["rust-analyzer"] = {
+      assist = {
+        importGranularity = "module",
+        importPrefix = "self",
+      },
+      cargo = {
+        loadOutDirsFromCheck = true
+      },
+      procMacro = {
+        enable = true
+      },
+    }
+  }
+}
 
 lspconfig.tsserver.setup({
   on_attach = function(client, bufnr)
@@ -113,6 +132,13 @@ lspconfig.sumneko_lua.setup({
 })
 
 
+lspconfig.yamlls.setup({
+  on_attach = function(client, bufnr)
+    lspconfig.util.default_config.on_attach(client, bufnr)
+  end
+})
+
 
 -- luasnip setup
 require('luasnip.loaders.from_vscode').lazy_load()
+require('luasnip.loaders.from_vscode').lazy_load { paths = { "../../../snippets/dart" } }

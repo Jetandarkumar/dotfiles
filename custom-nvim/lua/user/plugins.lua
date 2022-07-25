@@ -43,17 +43,95 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
-
-  use 'wbthomason/packer.nvim'
-  use "milisims/nvim-luaref"
-  use 'lewis6991/impatient.nvim'
 
   -- ColorSchemes
   use 'navarasu/onedark.nvim'
-  use "lunarvim/darkplus.nvim"
+  -- use "lunarvim/darkplus.nvim"
+  use "folke/tokyonight.nvim"
+  use "NvChad/base46"
+  use "glepnir/oceanic-material"
+  use({
+    "catppuccin/nvim",
+    as = "catppuccin"
+  })
 
+  -- test
+  -- use({
+  --   "kylechui/nvim-surround",
+  --   config = function()
+  --     require("nvim-surround").setup({
+  --       -- Configuration here, or leave empty to use defaults
+  --     })
+  --   end
+  -- })
+  --
 
+  -- Comment Plugin
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
+  -- Flutter Plugins
+  use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+  -- use { "nvim-telescope/telescope-file-browser.nvim" }
+  -- AutoPairs
+  use "windwp/nvim-autopairs"
+
+  -- Bufferline
+  -- use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
+
+  -- Dap
+  use 'mfussenegger/nvim-dap'
+  use "rcarriga/nvim-dap-ui"
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'nvim-telescope/telescope-dap.nvim'
+
+  --terminal
+  use { "akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
+    require("toggleterm").setup()
+  end }
+
+  -- UI
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+  -- smooth scroll
+  use {
+    'declancm/cinnamon.nvim',
+    config = function() require('cinnamon').setup() end
+  }
+
+  -- Fuzzy Finder
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { { 'nvim-lua/plenary.nvim' } }
+  }
+  use { "ThePrimeagen/harpoon",
+    config = function()
+      require("harpoon").setup()
+    end }
+
+  -- Snippets
+  use "Nash0x7E2/awesome-flutter-snippets"
+
+  -- Syntax Highlighting
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use "p00f/nvim-ts-rainbow"
 
   -- LSP Plugins
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
@@ -67,36 +145,10 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- lsp installer
   use "onsails/lspkind.nvim"
 
-  -- Syntax Highlighting
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-  }
-  -- Comment Plugin
-  use {
-    'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup()
-    end
-  }
-  -- Flutter Plugins
-  use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
-
-  -- smooth scroll
-  use {
-    'declancm/cinnamon.nvim',
-    config = function() require('cinnamon').setup() end
-  }
-
-  -- Fuzzy Finder
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { { 'nvim-lua/plenary.nvim' } }
-  }
-
-  use "windwp/nvim-autopairs"
-  -- Automatically complete brackets
-
+  -- packer
+  use 'wbthomason/packer.nvim'
+  use "milisims/nvim-luaref" -- idk
+  use 'lewis6991/impatient.nvim' --startup time increase
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

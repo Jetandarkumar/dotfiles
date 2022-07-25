@@ -74,7 +74,7 @@ snippet = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     {name = 'path'},
-    {name = 'nvim_lsp', keyword_length = 5},
+    {name = 'nvim_lsp', keyword_length = 3},
   },
   window = {
     documentation = cmp.config.window.bordered()
